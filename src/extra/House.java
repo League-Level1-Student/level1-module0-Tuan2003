@@ -1,7 +1,6 @@
 package extra;
 
 import java.awt.Color;
-import java.util.Random;
 
 import org.jointheleague.graphical.robot.Robot;
 
@@ -13,16 +12,17 @@ public class House {
 		rob.miniaturize();
 		rob.setSpeed(10000);
 		rob.moveTo(30, 500);
-		drawHouses("small", "blue");
-		drawHouses("medium","green");
-		drawHouses("large","red");
-		drawHouses("small","yellow");
-		drawHouses("medium","orange");
-		drawHouses("large","black");
+		rob.turn(355);
+		rob.turn(5);
+		drawHouses("medium", "blue");
+		drawHouses("large","green");
+		drawHouses("small","red");
+		drawHouses("medium","yellow");
+		drawHouses("small","orange");
+		drawHouses("medium","black");
 		drawHouses("small","green");
-		drawHouses("medium","orange");
-		drawHouses("large","purple");
-		drawHouses("small","blue");
+		drawHouses("large","orange");
+		drawHouses("medium","purple");
 
 	}
 
@@ -60,17 +60,17 @@ public class House {
 		}
 		rob.move(h);
 		rob.penUp();
-		rob.move(8);
+		rob.move(5);
 		rob.penDown();
 		rob.turn(270);
 		rob.setPenColor(19, 38, 0);
 		rob.move(20);
 		rob.turn(270);
 		rob.penUp();
-		rob.move(8);
-
+		rob.move(5);
+		
 	}
-
+	
 	public static void drawFlatRoof() {
 		rob.turn(90);
 		rob.move(30);
@@ -83,7 +83,8 @@ public class House {
 		rob.penDown();
 		rob.turn(35);
 		rob.move(40);
-		rob.turn(125);
+		rob.turn(120);
 		rob.move(40);
+		rob.turn(25);
 		}
 }
