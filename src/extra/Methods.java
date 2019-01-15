@@ -53,8 +53,7 @@ System.out.println(sum); //prints 4
 
 
 //8. Write a method that works out whether a given number is odd or not.
-  oddOrNot(1);
- System.out.println(oddOrNot());
+ System.out.println(oddOrNot(5));
 	}
 	
 	public static void weRock() {
@@ -86,12 +85,10 @@ System.out.println(sum); //prints 4
 		return a+l;
 	}
 	public static String oddOrNot(int num) {
-		String lol = "";
-		if(num%num==0 || num%2==0 || num%3==0 || num%5==0 || num%7==0 || num%11==0) {
-			lol = "odd"; 
+		if(num%2==1) {
+			return "odd"; 
 		}
-		lol = "not odd";
-		return lol;
+		return "even";
 	}
 	
 }
