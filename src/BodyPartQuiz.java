@@ -33,30 +33,61 @@ public class BodyPartQuiz {
 		// 1. Make an int variable to hold the score.
 int score = 0; 
 		// 2. Set the size of the window in the initializeGui() method below
-			
+initializeGui();
 		// 4. Ask the user who this person is and store their answer
 		String guess= JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if(guess.equalsIgnoreCase("arnold")) {
+JOptionPane.showMessageDialog(null, "Correct !");
+score = score +1; 
+}else {
+	JOptionPane.showMessageDialog(null,"Wrong it was Arnold !");
+}
+showNextImage();
+JOptionPane.showMessageDialog(null,"Your current score: " + score);
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
 	    	// 8. Show them their current score
-
 		// 9. .... repeat for all your images.....
+String guess1= JOptionPane.showInputDialog("who is this?");
+if(guess1.equalsIgnoreCase("leonardo")) {
+JOptionPane.showMessageDialog(null, "Correct !");
+score = score + 1;
+}else {
+JOptionPane.showMessageDialog(null,"Wrong it was Leonardo !");
+}
+showNextImage();
+JOptionPane.showMessageDialog(null,"Your current score: " + score);
 
+String guess2= JOptionPane.showInputDialog("who is this?");
+if(guess2.equalsIgnoreCase("morgan")) {
+JOptionPane.showMessageDialog(null, "Correct !");
+score = score + 1; 
+}else {
+JOptionPane.showMessageDialog(null,"Wrong it was Morgan !");
+}
+showNextImage();
+JOptionPane.showMessageDialog(null,"Your current score: " + score);
 
-	}
+String guess3= JOptionPane.showInputDialog("who is this?");
+if(guess3.equalsIgnoreCase("jack")) {
+JOptionPane.showMessageDialog(null, "Correct !");
+score = score + 1; 
+}else {
+JOptionPane.showMessageDialog(null,"Wrong it was Jack !");
+}
+JOptionPane.showMessageDialog(null,"Your current score: " + score);
+}
 
 	public void showNextImage() {
 		panel.removeAll();
 		panel.add(getNextImage());		
 		window.setVisible(true);
-	}
+		
+}
 
 	public static void main(String[] args) {
 		BodyPartQuiz quiz = new BodyPartQuiz();

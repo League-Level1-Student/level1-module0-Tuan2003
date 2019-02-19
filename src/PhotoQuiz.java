@@ -34,10 +34,10 @@ quizWindow.pack();
 String answer = JOptionPane.showInputDialog(null, "What company logo is this?");
 		// 7. print "CORRECT" if the user gave the right answer
 if(answer.equalsIgnoreCase("apple")) {
-System.out.println("CORRECT");
+System.out.println("Correct");
 }else {
 		// 8. print "INCORRECT" if the answer is wrong
-	System.out.println("INCORRECT");
+	System.out.println("Incorrect !");
 }
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
 quizWindow.remove(comp);
@@ -49,7 +49,12 @@ quizWindow.add(comp1);
 		// 12. pack the quiz window
 quizWindow.pack();
 		// 13. ask another question
-String answer1 = JOptionPane.showInputDialog(message); 
+String answer1 = JOptionPane.showInputDialog("What logo is this? "); 
+if(answer1.equalsIgnoreCase("instagram")) {
+	System.out.println("Correct !");
+}else {
+	System.out.println("Incorrect !");
+}
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}
